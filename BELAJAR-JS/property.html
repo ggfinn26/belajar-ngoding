@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const orang = {}
+        orang["Nama"] = "Muhammad Ahnaf Nadewa Biyangsa Ahyar"
+        orang["Posisi"] = "Striker"
+        orang["Nomor Punggung"] = 22
+
+        const orangString = JSON.stringify(orang)
+        document.writeln(orangString)
+        document.writeln(`<p> Nama: ${orang.Nama}<p>`)
+        document.writeln(`<p>Posisi: \"${orang.Posisi}\"</p>`)
+        document.writeln(`<p>Posisi: \"${orang["Nomor Punggung"]}\"</p>`)
+
+        let person = {}
+        if (person.name === undefined) {
+            document.writeln("WHAT THE HELL?!")
+        }
+        else {
+            document.writeln("GOOD JOB!")
+        }
+
+        let rokok = null
+        if (rokok === null) {
+            document.writeln("WHAT THE FUCK?!")
+        } else {
+            document.writeln("NICE JOB!")
+        }
+        const check = "Nama" in orang
+        let embel = "object orang"
+        document.writeln(`<p>Apakah Nama ada di ${embel}?</p>`)
+        document.writeln(`<p> HASILNYA: ${check}</p>`)
+
+        const student = {
+            firstName: "Baba",
+            middleName: undefined,
+            lastName: "Tata"
+        }
+
+        if ("middleName" in student) {
+            document.writeln(`Halo ${student.middleName}`)
+        }
+
+        const names = [null, "lala", null]
+        const result = 0 in names;
+        document.writeln(`<p> ${result} <p>`)
+
+    </script>
+
+</body>
+
+</html>

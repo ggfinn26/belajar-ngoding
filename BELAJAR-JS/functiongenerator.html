@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function* createNames() {
+            yield `<p>Ahnaf</p>`;
+            yield `<p>Nadewa</p>`;
+            yield `<p>Biyangsa</p>`;
+        }
+
+        const names = createNames();
+        for (const name of names) {
+            document.writeln(name);
+        }
+
+        function* test() {
+            if (saldo < hargaBarang) {
+                yield `<p>Saldo anda Tidak Mencukupi</p>`;
+                return;
+            }
+            yield `<p> Saldo Cukup Silakan Masukkan PIN</p>`;
+        }
+
+        let saldo = 20000;
+        let hargaBarang = 10000;
+        const testing = test();
+        for (const message of testing) {
+            document.writeln(message);
+        }
+
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yield i ${i}`);
+                    yield i;
+                }
+            }
+        }
+
+        function buatGanjilArray(value) {
+            const result = [];
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yield i ${i}`)
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        let mulai = 1;
+        const angkaGanjil = buatGanjil(100);
+        for (const ganjil of angkaGanjil) {
+            // document.writeln(`<p> ANGKA GANJIL KE-${mulai++} = ${ganjil} </p>`);
+            console.info(ganjil)
+        }
+
+        const arrayGanjil = buatGanjilArray(100);
+        for (const angkaArrayGanjil of arrayGanjil) {
+            console.info(angkaArrayGanjil);
+        }
+
+        const printIn = function (message) {
+            document.writeln(`<p>${message}</p>`);
+        }
+
+        let angka = 1;
+        let pesan = "ini adalah angka:"
+        printIn(`${pesan} ${angka}`);
+
+
+
+    </script>
+</body>
+
+</html>

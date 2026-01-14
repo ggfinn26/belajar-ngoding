@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        SELAMAT DATANG:
+        <span id="coba"></span>
+    </div>
+    <script>
+
+        function printKeLayar(value) {
+            const nama = prompt("MASUKKAN NAMA ANDA");
+            const tempat = document.getElementById("coba");
+
+            if (nama != null) {
+                tempat.textContent = `${nama}`;
+            }
+        }
+
+        printKeLayar();
+    </script>
+</body>
+
+</html>

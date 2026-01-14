@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Tailwind CSS - Latihan Lengkap</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles untuk instruksi soal - JANGAN DIUBAH */
+        .soal-container {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .soal-title {
+            color: #333;
+            border-bottom: 2px solid #06b6d4;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .instruksi {
+            background: #ecfeff;
+            padding: 15px;
+            border-left: 4px solid #06b6d4;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .area-jawaban {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            margin-top: 15px;
+            min-height: 100px;
+            background: #fafafa;
+        }
+
+        .kode-target {
+            background: #1e293b;
+            color: #22d3ee;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 13px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-5">
+
+    <h1 class="text-3xl font-bold text-center text-slate-800 mb-4">
+        🌊 Ujian Tailwind CSS - Latihan Lengkap
+    </h1>
+    <p class="text-center text-gray-600 mb-8">
+        Tambahkan class Tailwind yang tepat pada setiap elemen untuk mencapai target yang diminta.<br>
+        Refresh browser untuk melihat hasil. Pastikan koneksi internet aktif untuk load Tailwind CDN.
+    </p>
+
+    <!-- PANDUAN SINGKAT -->
+    <div class="soal-container">
+        <h2 class="soal-title">📖 Panduan Singkat Tailwind CSS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+            <div class="bg-cyan-50 p-3 rounded">
+                <strong>Spacing:</strong><br>
+                p-4 (padding), m-4 (margin)<br>
+                px-4, py-4, pt-4, pb-4, pl-4, pr-4
+            </div>
+            <div class="bg-cyan-50 p-3 rounded">
+                <strong>Colors:</strong><br>
+                text-red-500, bg-blue-500<br>
+                border-green-500
+            </div>
+            <div class="bg-cyan-50 p-3 rounded">
+                <strong>Typography:</strong><br>
+                text-xl, font-bold<br>
+                text-center, uppercase
+            </div>
+            <div class="bg-cyan-50 p-3 rounded">
+                <strong>Flexbox:</strong><br>
+                flex, justify-center, items-center<br>
+                flex-col, gap-4
+            </div>
+            <div class="bg-cyan-50 p-3 rounded">
+                <strong>Grid:</strong><br>
+                grid, grid-cols-3, gap-4<br>
+                col-span-2, row-span-2
+            </div>
+            <div class="bg-cyan-50 p-3 rounded">
+                <strong>Responsive:</strong><br>
+                sm:, md:, lg:, xl:<br>
+                md:text-xl, lg:grid-cols-4
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 1: TYPOGRAPHY DASAR -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 1: Typography Dasar</h2>
+        <div class="instruksi">
+            <strong>Target:</strong> Tambahkan class Tailwind untuk membuat:<br>
+            • Heading: ukuran 3xl, bold, warna slate-800<br>
+            • Paragraf: ukuran base, warna gray-600, line-height relaxed
+            <div class="kode-target">class="text-3xl font-bold text-slate-800"</div>
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <h2 class="text-3xl font-bold text-slate-800">Ini Heading Besar</h2>
+            <p class="text-gray-600 line-height-relaxed">Ini adalah paragraf dengan ukuran normal dan warna abu-abu.
+                Lorem ipsum dolor sit
+                amet
+                consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <!-- SOAL 2: SPACING (MARGIN & PADDING) -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 2: Spacing (Margin & Padding)</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Box 1: padding 6 semua sisi, margin-bottom 4<br>
+            • Box 2: padding-x 8, padding-y 4, margin 2<br>
+            • Box 3: padding-top 8, padding-bottom 2, padding-left 4, padding-right 4
+            <div class="kode-target">p-6 mb-4 | px-8 py-4 m-2 | pt-8 pb-2 pl-4 pr-4</div>
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="bg-blue-200 p-6 mb-4">Box 1: p-6 mb-4</div>
+            <div class="bg-green-200 px-8 py-4 m-2">Box 2: px-8 py-4 m-2</div>
+            <div class="bg-red-200 pt-8 pb-2 pl-4 pr-4">Box 3: pt-8 pb-2 pl-4 pr-4</div>
+        </div>
+    </div>
+
+    <!-- SOAL 3: COLORS -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 3: Colors</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Box 1: background red-500, text white<br>
+            • Box 2: background gradient dari cyan-400 ke blue-500 (ke kanan)<br>
+            • Box 3: background transparent, border 2px blue-500, text blue-500
+            <div class="kode-target">bg-red-500 text-white | bg-gradient-to-r from-cyan-400 to-blue-500 | border-2
+                border-blue-500 text-blue-500</div>
+        </div>
+        <div class="area-jawaban flex gap-4">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="p-4 rounded bg-red-500 text-white">Box 1</div>
+            <div class="p-4 rounded text-white bg-gradient-to-r from-cyan-400 to-blue-500">Box 2 Gradient</div>
+            <div class="p-4 rounded bg-transparent border-2 border-blue-500 text-blue-500">Box 3 Outline</div>
+        </div>
+    </div>
+
+    <!-- SOAL 4: SIZING (WIDTH & HEIGHT) -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 4: Sizing (Width & Height)</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Box 1: width 32 (128px), height 32<br>
+            • Box 2: width 1/2 (50%), height 24<br>
+            • Box 3: width full (100%), height 16<br>
+            • Box 4: width 48, height 48, rounded-full (lingkaran)
+            <div class="kode-target">w-32 h-32 | w-1/2 h-24 | w-full h-16 | w-48 h-48 rounded-full</div>
+        </div>
+        <div class="area-jawaban space-y-4">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="bg-purple-400 w-32 h-32">Box 1</div>
+            <div class="bg-pink-400 w-1/2 h-24">Box 2</div>
+            <div class="bg-indigo-400 w-full h-16">Box 3</div>
+            <div class="bg-teal-400 flex items-center justify-center text-white w-48 h-48 rounded-full">Circle</div>
+        </div>
+    </div>
+
+    <!-- SOAL 5: BORDER & ROUNDED -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 5: Border & Rounded</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Box 1: border 2px, border-gray-300, rounded-lg<br>
+            • Box 2: border 4px, border-red-500, rounded-none<br>
+            • Box 3: border-b 4px (bawah saja), border-blue-500<br>
+            • Box 4: rounded-full, bg-green-500
+            <div class="kode-target">border-2 border-gray-300 rounded-lg | border-4 border-red-500 rounded-none |
+                border-b-4 border-blue-500 | rounded-full bg-green-500</div>
+        </div>
+        <div class="area-jawaban flex gap-4 flex-wrap">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="p-4">Border rounded</div>
+            <div class="p-4">Border square</div>
+            <div class="p-4">Border bottom only</div>
+            <div class="w-20 h-20 flex items-center justify-center text-white">Circle</div>
+        </div>
+    </div>
+
+    <!-- SOAL 6: FLEXBOX DASAR -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 6: Flexbox Dasar</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Container: flex, justify-between, items-center, bg-gray-200, p-4<br>
+            • Items: bg-blue-500, text-white, p-4, rounded
+            <div class="kode-target">flex justify-between items-center bg-gray-200 p-4</div>
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat pada container -->
+            <div class="">
+                <div class="bg-blue-500 text-white p-4 rounded">Item 1</div>
+                <div class="bg-blue-500 text-white p-4 rounded">Item 2</div>
+                <div class="bg-blue-500 text-white p-4 rounded">Item 3</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 7: FLEXBOX ADVANCED -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 7: Flexbox Advanced</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Container: flex, flex-wrap, gap-4, justify-center<br>
+            • Items: flex-1, min-w-[200px], bg-emerald-500, p-6, rounded-lg, text-white, text-center
+            <div class="kode-target">flex flex-wrap gap-4 justify-center</div>
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="">
+                <div class="">Card 1</div>
+                <div class="">Card 2</div>
+                <div class="">Card 3</div>
+                <div class="">Card 4</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 8: GRID DASAR -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 8: Grid Dasar</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Container: grid, grid-cols-3, gap-4<br>
+            • Items: bg-orange-400, p-8, text-center, text-white, rounded
+            <div class="kode-target">grid grid-cols-3 gap-4</div>
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="">
+                <div class="">1</div>
+                <div class="">2</div>
+                <div class="">3</div>
+                <div class="">4</div>
+                <div class="">5</div>
+                <div class="">6</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 9: GRID SPAN -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 9: Grid Span</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Container: grid, grid-cols-4, gap-4<br>
+            • Item "Wide": col-span-2, bg-rose-500<br>
+            • Item "Tall": row-span-2, bg-violet-500<br>
+            • Item biasa: bg-amber-400
+            <div class="kode-target">col-span-2 | row-span-2</div>
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="grid grid-cols-4 gap-4">
+                <div class="p-4 text-white text-center rounded">Wide</div>
+                <div class="bg-amber-400 p-4 text-center rounded">2</div>
+                <div class="bg-amber-400 p-4 text-center rounded">3</div>
+                <div class="p-4 text-white text-center rounded">Tall</div>
+                <div class="bg-amber-400 p-4 text-center rounded">5</div>
+                <div class="bg-amber-400 p-4 text-center rounded">6</div>
+                <div class="bg-amber-400 p-4 text-center rounded">7</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 10: HOVER & FOCUS STATES -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 10: Hover & Focus States</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Button 1: bg-blue-500, hover:bg-blue-700, text-white, p-4, rounded, transition<br>
+            • Button 2: bg-transparent, border-2 border-green-500, text-green-500, hover:bg-green-500,
+            hover:text-white<br>
+            • Input: border-2, border-gray-300, p-3, rounded, focus:border-blue-500, focus:outline-none
+            <div class="kode-target">hover:bg-blue-700 | hover:bg-green-500 hover:text-white | focus:border-blue-500
+                focus:outline-none</div>
+        </div>
+        <div class="area-jawaban flex gap-4 items-center flex-wrap">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <button class="">Primary Button</button>
+            <button class="">Outline Button</button>
+            <input type="text" placeholder="Focus me..." class="">
+        </div>
+    </div>
+
+    <!-- SOAL 11: RESPONSIVE DESIGN -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 11: Responsive Design</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Box: bg-red-500 (mobile), md:bg-yellow-500 (tablet), lg:bg-green-500 (desktop)<br>
+            • Text: text-sm (mobile), md:text-lg (tablet), lg:text-2xl (desktop)<br>
+            • Padding: p-4 (mobile), md:p-8 (tablet), lg:p-12 (desktop)
+            <div class="kode-target">bg-red-500 md:bg-yellow-500 lg:bg-green-500 | text-sm md:text-lg lg:text-2xl | p-4
+                md:p-8 lg:p-12</div>
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="text-white text-center rounded">
+                Resize browser untuk melihat perubahan!<br>
+                Mobile: Merah | Tablet (md): Kuning | Desktop (lg): Hijau
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 12: RESPONSIVE GRID -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 12: Responsive Grid</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Container: grid, grid-cols-1 (mobile), sm:grid-cols-2 (small), md:grid-cols-3 (medium), lg:grid-cols-4
+            (large), gap-4<br>
+            • Items: bg-cyan-500, p-6, rounded, text-white, text-center
+            <div class="kode-target">grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4</div>
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="">
+                <div class="">1</div>
+                <div class="">2</div>
+                <div class="">3</div>
+                <div class="">4</div>
+                <div class="">5</div>
+                <div class="">6</div>
+                <div class="">7</div>
+                <div class="">8</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 13: SHADOWS -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 13: Shadows</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Card 1: shadow-sm, bg-white, p-6, rounded<br>
+            • Card 2: shadow-md, bg-white, p-6, rounded<br>
+            • Card 3: shadow-lg, bg-white, p-6, rounded<br>
+            • Card 4: shadow-xl, bg-white, p-6, rounded, hover:shadow-2xl, transition
+            <div class="kode-target">shadow-sm | shadow-md | shadow-lg | shadow-xl hover:shadow-2xl transition</div>
+        </div>
+        <div class="area-jawaban bg-gray-200 p-6">
+            <div class="flex gap-6 flex-wrap">
+                <!-- JAWABAN: tambahkan class yang tepat -->
+                <div class="">Shadow SM</div>
+                <div class="">Shadow MD</div>
+                <div class="">Shadow LG</div>
+                <div class="">Shadow XL (hover me!)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 14: OPACITY & BACKDROP -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 14: Opacity</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Box 1: opacity-100 (full)<br>
+            • Box 2: opacity-75<br>
+            • Box 3: opacity-50<br>
+            • Box 4: opacity-25
+            <div class="kode-target">opacity-100 | opacity-75 | opacity-50 | opacity-25</div>
+        </div>
+        <div class="area-jawaban flex gap-4">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="bg-blue-600 text-white p-6 rounded">100%</div>
+            <div class="bg-blue-600 text-white p-6 rounded">75%</div>
+            <div class="bg-blue-600 text-white p-6 rounded">50%</div>
+            <div class="bg-blue-600 text-white p-6 rounded">25%</div>
+        </div>
+    </div>
+
+    <!-- SOAL 15: POSITION -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 15: Position</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Container: relative, h-48, bg-gray-200<br>
+            • Box merah: absolute, top-0, right-0, w-16, h-16, bg-red-500<br>
+            • Box biru: absolute, bottom-0, left-0, w-16, h-16, bg-blue-500<br>
+            • Box hijau: absolute, top-1/2, left-1/2, transform, -translate-x-1/2, -translate-y-1/2, w-20, h-20,
+            bg-green-500
+            <div class="kode-target">absolute top-0 right-0 | absolute bottom-0 left-0 | absolute top-1/2 left-1/2
+                -translate-x-1/2 -translate-y-1/2</div>
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="">
+                <div class="">TR</div>
+                <div class="">BL</div>
+                <div class="">Center</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 16: CARD COMPONENT -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 16: Card Component</h2>
+        <div class="instruksi">
+            <strong>Target:</strong> Buat card yang menarik dengan:<br>
+            • Card wrapper: bg-white, rounded-xl, shadow-lg, overflow-hidden, max-w-sm<br>
+            • Image: w-full, h-48, object-cover<br>
+            • Content: p-6<br>
+            • Title: text-xl, font-bold, text-gray-800, mb-2<br>
+            • Description: text-gray-600, mb-4<br>
+            • Button: bg-blue-500, text-white, px-4, py-2, rounded-lg, hover:bg-blue-600
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="">
+                <img src="https://picsum.photos/400/300" alt="Card image" class="">
+                <div class="">
+                    <h3 class="">Card Title</h3>
+                    <p class="">This is a beautiful card component built with Tailwind CSS utility classes.</p>
+                    <button class="">Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 17: NAVBAR COMPONENT -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 17: Navbar Component</h2>
+        <div class="instruksi">
+            <strong>Target:</strong> Buat navbar dengan:<br>
+            • Nav: bg-slate-800, text-white, p-4<br>
+            • Container: flex, justify-between, items-center, max-w-6xl, mx-auto<br>
+            • Logo: text-2xl, font-bold<br>
+            • Nav links container: flex, gap-6<br>
+            • Nav links: hover:text-cyan-400, transition
+        </div>
+        <div class="area-jawaban p-0 border-none">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <nav class="">
+                <div class="">
+                    <div class="">MyBrand</div>
+                    <ul class="">
+                        <li><a href="#" class="">Home</a></li>
+                        <li><a href="#" class="">About</a></li>
+                        <li><a href="#" class="">Services</a></li>
+                        <li><a href="#" class="">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- SOAL 18: FORM STYLING -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 18: Form Styling</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Form container: bg-white, p-8, rounded-xl, shadow-lg, max-w-md<br>
+            • Labels: block, text-gray-700, font-medium, mb-2<br>
+            • Inputs: w-full, p-3, border-2, border-gray-200, rounded-lg, focus:border-blue-500, focus:outline-none,
+            mb-4<br>
+            • Button: w-full, bg-blue-500, text-white, p-3, rounded-lg, font-medium, hover:bg-blue-600, transition
+        </div>
+        <div class="area-jawaban">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <form class="">
+                <div>
+                    <label class="">Email</label>
+                    <input type="email" placeholder="your@email.com" class="">
+                </div>
+                <div>
+                    <label class="">Password</label>
+                    <input type="password" placeholder="••••••••" class="">
+                </div>
+                <button type="submit" class="">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SOAL 19: ALERT COMPONENT -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 19: Alert Components</h2>
+        <div class="instruksi">
+            <strong>Target:</strong> Buat 4 jenis alert:<br>
+            • Success: bg-green-100, border-l-4, border-green-500, text-green-700, p-4, rounded<br>
+            • Warning: bg-yellow-100, border-l-4, border-yellow-500, text-yellow-700, p-4, rounded<br>
+            • Error: bg-red-100, border-l-4, border-red-500, text-red-700, p-4, rounded<br>
+            • Info: bg-blue-100, border-l-4, border-blue-500, text-blue-700, p-4, rounded
+        </div>
+        <div class="area-jawaban space-y-4">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <div class="">✅ Success! Your changes have been saved.</div>
+            <div class="">⚠️ Warning! Please review your input.</div>
+            <div class="">❌ Error! Something went wrong.</div>
+            <div class="">ℹ️ Info: This is an informational message.</div>
+        </div>
+    </div>
+
+    <!-- SOAL 20: FULL PAGE LAYOUT -->
+    <div class="soal-container">
+        <h2 class="soal-title">Soal 20: Full Page Layout</h2>
+        <div class="instruksi">
+            <strong>Target:</strong> Buat layout halaman lengkap:<br>
+            • Header: bg-slate-900, text-white, p-4<br>
+            • Main container: flex, flex-col, md:flex-row, min-h-[400px]<br>
+            • Sidebar: w-full, md:w-64, bg-slate-700, text-white, p-4<br>
+            • Content: flex-1, bg-white, p-6<br>
+            • Footer: bg-slate-800, text-white, p-4, text-center
+        </div>
+        <div class="area-jawaban p-0 border-none overflow-hidden rounded-lg">
+            <!-- JAWABAN: tambahkan class yang tepat -->
+            <header class="">
+                <h1 class="text-xl font-bold">Website Header</h1>
+            </header>
+            <div class="">
+                <aside class="">
+                    <h3 class="font-bold mb-4">Sidebar</h3>
+                    <ul class="space-y-2">
+                        <li>Dashboard</li>
+                        <li>Settings</li>
+                        <li>Profile</li>
+                    </ul>
+                </aside>
+                <main class="">
+                    <h2 class="text-2xl font-bold mb-4">Main Content</h2>
+                    <p class="text-gray-600">This is the main content area. Use flexbox to create this responsive
+                        layout.</p>
+                </main>
+            </div>
+            <footer class="">
+                &copy; 2024 My Website. All rights reserved.
+            </footer>
+        </div>
+    </div>
+
+    <!-- BONUS: DARK MODE -->
+    <div class="soal-container">
+        <h2 class="soal-title">🌙 Bonus: Dark Mode Toggle</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            Tailwind mendukung dark mode dengan prefix dark:<br>
+            • bg-white dark:bg-gray-800<br>
+            • text-gray-900 dark:text-white<br>
+            <br>
+            Untuk mengaktifkan, tambahkan class "dark" pada tag &lt;html&gt;
+            <div class="kode-target">bg-white dark:bg-slate-800 | text-gray-900 dark:text-white</div>
+        </div>
+        <div class="area-jawaban">
+            <p class="text-center text-gray-500">
+                Dark mode adalah fitur lanjutan. Coba tambahkan class "dark" pada &lt;html&gt;
+                dan lihat perubahannya pada elemen dengan prefix dark:
+            </p>
+            <!-- Contoh dark mode - coba tambahkan class dark di html tag -->
+            <div class="mt-4 p-6 rounded-lg bg-white dark:bg-slate-800 text-gray-900 dark:text-white shadow-lg">
+                <h3 class="font-bold mb-2">Dark Mode Box</h3>
+                <p>Box ini akan berubah warna jika dark mode aktif.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center py-10 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl mt-8">
+        <h2 class="text-3xl font-bold mb-4">🎉 Selesai!</h2>
+        <p class="text-lg">Jika semua soal sudah dikerjakan dengan benar, selamat!</p>
+        <p>Kamu sudah menguasai Tailwind CSS utility classes.</p>
+    </div>
+
+</body>
+
+</html>

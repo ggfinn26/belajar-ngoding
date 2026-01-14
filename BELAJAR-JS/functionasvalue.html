@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function greet(name) {
+            document.writeln(`<p>Halo ${name}</p>`);
+        }
+
+        let sapa = greet;
+
+        greet("Eko");
+        sapa("Kurki")
+
+        function giveMeName(callback) {
+            callback("Eko");
+        }
+
+        giveMeName(greet);
+        giveMeName(sapa);
+
+        let say = function (nama) {
+            document.writeln(`<p>Halo ${nama}</p>`);
+        }
+        say("Dewa")
+
+        function outer() {
+            function inner() {
+                document.writeln("inner");
+            }
+            inner();
+            inner();
+        }
+
+        outer();
+        // inner(); // error
+
+        // global function
+
+        let counter = 0;
+
+        function hitMe() {
+            document.writeln(`<p> ${counter}</p>`)
+            counter++
+        }
+
+        hitMe();
+        hitMe();
+
+        function first() {
+            let firstVar = 1500;
+
+            function second() {
+                document.writeln(`<p>${firstVar}</p>`)
+            }
+
+            second();
+        }
+
+        first();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chance@1.1.11/chance.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = 1
+        let b = 2
+        let jumlah = a + b
+        let jumlahAsli = jumlah
+        document.writeln(`<p> diketahui a = ${a} </p>`)
+        document.writeln(`<p> diketahui b = ${b} </p>`)
+        document.writeln(`<p> A+B = ${jumlah} </p>`)
+
+        jumlah = jumlah - 1;
+        document.writeln(`<p> A+B-1 = ${jumlah} </p>`)
+
+        jumlah = jumlah * 2;
+        document.writeln(`<p> 2 * 2 = ${jumlah} </p>`)
+
+        let chance = new Chance();
+        let roll = chance.integer({ min: 1, max: 10 })
+        document.writeln(`<p> Random Number: ${roll}</p>`)
+        let rollPertama = roll;
+        document.writeln(`<p> Roll Pertama (asli): ${rollPertama}</p>`);
+
+        roll2 = roll + 5;
+
+        document.writeln(`<p> Roll Kedua: ${roll2}</p>`);
+
+        roll3 = ++roll2
+
+        document.writeln(`<p> Roll ketiga ${roll3}</p>`);
+
+
+    </script>
+
+</body>
+
+</html>

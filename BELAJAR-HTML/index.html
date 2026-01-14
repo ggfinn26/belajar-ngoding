@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!-- INI ADALAH PENANDA BAHWA DOKUMEN INI ADALAH HTML -->
+<html lang="en">
+<!-- lang="en" ADALAH ATRIBUT UNTUK MENANDAI BAHWA BAHASA KONTEN HALAMAN ADALAH BAHASA INGGRIS (BUKAN BAHASA HTML-NYA). INI MEMBANTU SCREEN READER DAN MESIN PENCARI MEMAHAMI BAHASA TEKS DI HALAMAN. -->
+
+<head>
+    <!-- TAG HEAD UNTUK MENGANDUNG ELEMEN-ELEMEN YANG TIDAK TAMPIL DI HALAMAN YANG DIBUKA -->
+    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> MERUPAKAN JENIS ENKODING YANG DIGUNAKAN UNTUK MENGATUR TAMPILAN TEKS DI HALAMAN YANG DIBUKA -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> MERUPAKAN TAG YANG DIGUNAKAN UNTUK MENGATUR TAMPILAN HALAMAN YANG DIBUKA
+     AGAR TAMPILNYA SESUAI DENGAN UKURAN PERANGKAT YANG DIGUNAKAN -->
+    <!-- masih banyak metatag lainnya, misalnya untuk pengaturan SEO, description, keywords, author, dll contoh: -->
+    <meta name="description" content="ini adalah deskripsi halaman">
+    <meta name="keywords" content="ini adalah keywords">
+    <meta name="author" content="ini adalah author">
+    <meta name="robots" content="index, follow">
+    <meta name="refresh" content="30">
+    <!-- description: ini adalah deskripsi halaman -->
+    <!-- keywords: ini adalah keywords -->
+    <!-- author: ini adalah author -->
+    <!-- robots: ini adalah fungsi untuk mengatur robots: index, follow, noindex,nofollow -->
+    <!-- index: ini adalah fungsi untuk mengatur agar halaman tersebut diindeks -->
+    <!-- follow: ini adalah fungsi untuk mengatur agar halaman tersebut diikuti -->
+    <!-- noindex: ini adalah fungsi untuk mengatur agar halaman tersebut tidak diindeks -->
+    <!-- nofollow: ini adalah fungsi untuk mengatur agar halaman tersebut tidak diikuti -->
+    <!-- refresh: ini adalah fungsi untuk mengatur agar halaman tersebut direfresh setiap 30 detik -->
+    <title>Document</title>
+    <!-- <title>Document</title> MERUPAKAN TAG YANG DIGUNAKAN UNTUK MENGATURJudul HALAMAN YANG DIBUKA -->
+    <!-- CATATAN: <title> HARUS disimpan di dalam <head>, bukan di <body>! -->
+    <style>
+        div {
+            background-color: red;
+        }
+
+        span {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<!-- NON-SEMANTIC TAG -->
+
+<body>
+    <!-- <body> MERUPAKAN TAG YANG DIGUNAKAN UNTUK MENGATUR TAMPILAN HALAMAN YANG DIBUKA -->
+    <h1>Belajar HTML</h1>
+    <!-- <h1> MERUPAKAN TAG YANG SAMA SEPERTI HEADING DI MICROSOFT WORD; H1 SAMPAI H6 -->
+    <p id="p1">Saya sedang belajar HTML</p>
+    <!-- <p> MERUPAKAN TAG YANG SAMA SEPERTI PARAGRAF DI MICROSOFT WORD -->
+    <a href="CONTOH.HTML">P1</a>
+    <!-- <a> atau <anchor> MERUPAKAN TAG UNTUK MENGATUR LINK REDIRECT KE HALAMAN EXTERNAL MAUPUN INTERNAL
+        UNTUK INTERNAL DIA MENGGUNAKAN <a href="#id-tag"> contoh:-->
+    <a href="#p1">P1</a>
+    <!-- SEMENTARA UNTUK EXTERNAL DIA MENGGUNAKAN <a href="url"> contoh:-->
+    <a href="https://www.google.com">Google</a>
+    <!-- BISA JUGA UNTUK MENGATUR REDIRECT KE HALAMAN HTML LAIN; MISAL JIKA KITA
+     PUNYA HALAMAN HTML LAIN YANG NAMANYA "CONTOH.HTML" -->
+    <a href="CONTOH.HTML">CONTOH.HTML</a>
+    <!-- JIKA HALAMAN HTML LAIN TIDAK ADA DI FOLDER YANG SAMA DENGAN HALAMAN HTML, MAKA
+     KITA BISA MENGGUNAKAN PATH -->
+    <a href="folder/CONTOH.HTML">CONTOH.HTML</a>
+
+    <table border="1">
+        <!-- <table> MERUPAKAN TAG YANG DIGUNAKAN UNTUK MENGATUR TAMPILAN TABEL DI HALAMAN YANG DIBUKA 
+            terdapat dua jenis tabel, yang sederhana dan yang kompleks-->
+        <!-- tabel sederhana: -->
+        <!-- untuk menampilkan border tabel, gunakan atribut border="angka"
+          di dalam tag <table>: <table border="1"> artinya border 1 pixel.
+          CATATAN: atribut border ini hanya menerima angka, bukan jenis border. -->
+        <!-- untuk mengatur JENIS border, gunakan CSS dengan property border-style:
+             1. dotted: titik-titik
+             2. dashed: garis putus-putus
+             3. solid: garis lurus
+             4. double: garis ganda
+             5. groove: efek 3D cekung (seperti dipahat ke dalam)
+             6. ridge: efek 3D timbul (kebalikan groove)
+             7. inset: efek border tertanam ke dalam
+             8. outset: efek border menonjol keluar
+             9. none: tidak ada border
+             10. hidden: tidak ada border (sama seperti none)
+          Contoh CSS: table { border-style: dotted; } -->
+        <!-- tabel juga bisa ditambahkan rowspans dan colspans
+         yang berfungsi untuk melakukan fungsi seperti merge row dan column
+         misal: <tr rowspan="2"></tr> atau <td colspan="2"></td>
+         berarti baris atau kolom tersebut akan di merge sejummlah dengan 2 kolom atau baris -->
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td colspan="2">2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <!-- tabel kompleks: menggunakan tag <thead>, <tbody>, <tfoot>, <th>, <tr>, <td>-->
+    <!-- <thead> digunakan untuk menampilkan header tabel -->
+    <!-- <tbody> digunakan untuk menampilkan body tabel -->
+    <!-- <tfoot> digunakan untuk menampilkan footer tabel -->
+    <!-- <th> digunakan untuk menampilkan header tabel -->
+    <!-- <tr> digunakan untuk menampilkan row tabel -->
+    <!-- <td> digunakan untuk menampilkan cell tabel -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ini header 1</th>
+                <th>ini header 2</th>
+                <th>ini header 3</th>
+                <th>ini header 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ini body 1</td>
+                <td>ini body 2</td>
+                <td>ini body 3</td>
+                <td>ini body 4</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>ini footer 1</td>
+                <td>ini footer 2</td>
+                <td>ini footer 3</td>
+                <td>ini footer 4</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- list: ada 2 jenis, yaitu list ordered dan list unordered -->
+    <!-- by default, list ordered akan menggunakan nomor dan list unordered akan menggunakan bullet point -->
+    <!-- untuk mengatur jenis tampilan list, gunakan atribut type di dalam tag <ol> atau <ul> -->
+    <!-- contoh: <ol type="1"> atau <ul type="disc"> -->
+    <!-- ol type: 1, A, a, I, i -->
+    <!-- ul type: disc, circle, square -->
+    <!-- list ordered: menggunakan tag <ol>, <li> -->
+    <!-- di dalam tag ol kita bisa mengatur start atau awal list dengan menggunakan atribut start di dalam tag <ol> -->
+    <ol start="120">
+        <li>ini list 120</li>
+        <li>ini list 121</li>
+        <li>ini list 122</li>
+    </ol>
+    <ol type="1" start="1">
+        <li>ini list 1</li>
+        <li>ini list 2</li>
+        <li>ini list 3</li>
+    </ol>
+    <!-- list unordered: menggunakan tag <ul>, <li> -->
+    <ul type="disc">
+        <li>ini list 1</li>
+        <li>ini list 2</li>
+        <li>ini list 3</li>
+    </ul>
+
+    <!-- di dalam list kita juga bisa gunakan<dl> <dd> dan <dt> -->
+    <!-- dl adalah description list -->
+    <!-- dd adalah definition description -->
+    <!-- dt adalah definition term -->
+    <!-- CATATAN: <dl> memang tidak punya bullet/nomor karena bukan list biasa,
+         melainkan pasangan istilah-deskripsi. Tidak perlu CSS untuk "menampilkan list". -->
+    <!-- by default dd akan melakukan tab -->
+    <dl>
+        <dt>ini list 1</dt>
+        <dd>list 1 merupakan list yang menggunakan tag dl dan dd</dd>
+        <dt>ini list 2</dt>
+        <dd>list 2 merupakan list yang menggunakan tag dl dan dd</dd>
+    </dl>
+
+    <!-- terdapat beberapa tag yang digunakan untuk mengatur tampilan teks atau formatting:
+    
+    PERBEDAAN PENTING <b> vs <strong> dan <i> vs <em>:
+    - <b> dan <i> = HANYA styling visual, tanpa makna khusus
+    - <strong> dan <em> = SEMANTIK, menandakan konten penting/penekanan
+    
+    Cara melihat perbedaannya:
+    1. Screen reader akan membaca <strong> dengan nada lebih tegas
+    2. Di Chrome DevTools > Elements > Accessibility, <strong> punya "role" khusus
+    3. Mesin pencari (Google) menganggap teks di <strong> lebih penting untuk SEO
+    
+    Daftar tag formatting:
+    <b> - tebal (visual saja)
+    <strong> - tebal + PENTING (semantic, untuk konten kritis/urgent)
+    <i> - italic (visual saja)
+    <em> - italic + PENEKANAN (semantic, untuk kata yang ditekankan)
+    <mark> - teks yang di highlight
+    <small> - teks yang lebih kecil
+    <del> - teks yang dicoret (menandakan konten dihapus)
+    <ins> - teks yang digaris bawahi (menandakan konten ditambahkan)
+    <sub> - subscript, teks di bawah (misal: H₂O)
+    <sup> - superscript, teks di atas (misal: x²) -->
+    <!-- contoh: -->
+    <b>ini teks tebal</b>
+    <strong>ini cara lain untuk menampilkan teks tebal</strong>
+    <i>ini teks italic</i>
+    <em>ini cara lain untuk menampilkan teks italic</em>
+    <mark>ini teks highlight</mark>
+    <small>ini teks lebih kecil</small>
+    <del>ini teks yang dicoret</del>
+    <ins>ini teks yang digaris bawahi</ins>
+    <sub>ini teks di bawah</sub>
+    <sup>ini teks di atas</sup>
+
+    <!-- jika kamu perhatikan, seluruh tag formatting ini tidak memiliki
+     jarak antar baris -->
+    <!-- untuk memberikan jarak antar baris, gunakan tag <br> -->
+    <br>
+    <b>contoh paragraf</b>
+    <br>
+    <i>contoh paragraf 2</i>
+    <br>
+    <mark>contoh paragraf 3</mark>
+    <br>
+
+    <!-- kalau kamu perhatikan, BR tidak memiliki penutup tag -->
+    <!-- ada tag yang tidak memiliki penutup tag: <br>, <hr>, <img>, <input>, <meta>, <link>, <base> -->
+    <!-- ini disebut self-closing tag -->
+    <!-- br untuk membuat jarak antar baris -->
+    <!-- hr untuk membuat garis horizontal -->
+    <!-- img untuk menginsert gambar -->
+    <!-- input untuk membuat elemen input di form (text, password, dll) -->
+    <!-- meta untuk metadata halaman (charset, viewport, SEO) -->
+    <!-- link untuk menghubungkan file eksternal (CSS, favicon) - BUKAN untuk hyperlink! -->
+    <!-- base untuk menentukan base URL untuk semua link relatif di halaman -->
+    <!-- contoh br dan meta sudah dijelaskan di atas -->
+    <!-- contoh sisanya: -->
+    <hr>
+    <img src="" alt="">
+    <input type="text">
+    <link rel="" href="">
+    <base href="">
+
+    <!-- img untuk menginsert gambar -->
+    <!-- kita bisa insert gambar dari 2 tempat, yaitu dari local atau dari internet -->
+    <!-- karena saya tidak memiliki gambar, maka saya akan buat gambar imajiner saja -->
+    <img src="nama_gambar.[ekstensinya]" alt="deskripsi gambar jika gambar tidak muncul">
+    <!-- untuk insert gambar dari internet, gunakan link gambar -->
+    <img src="https://i.ytimg.com/vi/0VLb7v894sY/maxresdefault.jpg" alt="gambar pohon">
+
+    <!-- base untuk membuat base url; misal: <base href="https://www.google.com/"> artinya akan
+     membuat base url menjadi https://www.google.com/ -->
+    <!-- CATATAN: <base> HARUS disimpan di dalam <head>, bukan di <body>!
+         Contoh di bawah ini hanya untuk demonstrasi, seharusnya dipindah ke <head> -->
+    <base href="https://www.google.com/">
+    <!-- ini tidak akan muncul di browser, tapi akan digunakan untuk link -->
+
+    <!-- link untuk membuat koneksi dengan file eksternal; misal css tailwind: <link rel="stylesheet" href="cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"> -->
+    <!-- di simpan di head -->
+
+    <!-- input adalah untuk membuat input atau form -->
+    <!-- ada banyak jenis input, misal: text, number, email, password, checkbox, radio, file, button -->
+    <!-- misal: -->
+    <input type="text">
+    <input type="number">
+    <input type="email">
+    <input type="password">
+    <input type="checkbox">
+    <input type="radio">
+    <input type="file">
+    <input type="button">
+    <!-- kita bisa memberikan nama atau label untuk input dan memberikan value untuk input -->
+    <!-- PENTING: atribut "for" di <label> harus mengarah ke "id" di <input>, BUKAN "name" -->
+    <!-- misal: -->
+    <input type="text" id="nama" name="nama" value="nilai">
+    <label for="nama">nama</label>
+    <input type="submit" value="submit">
+
+    <!-- button juga bisa menggunakan tag <button> -->
+    <!-- button bisa memilih type, misal: button, submit, reset -->
+    <button type="button">button</button>
+    <button type="submit">submit</button>
+    <button type="reset">reset</button>
+    <!-- button juga bisa dikaitkan dengan gambar -->
+    <!-- misal: -->
+    <button type="button"><img src="nama_gambar.[ekstensinya]" alt="deskripsi gambar jika gambar tidak muncul"></button>
+    <button type="button"><img src="https://i.ytimg.com/vi/0VLb7v894sY/maxresdefault.jpg" alt="gambar pohon"></button>
+
+    <!-- form adalah untuk membuat form -->
+    <!-- misal: -->
+    <form action="">
+
+    </form>
+    <!-- action adalah untuk menentukan action dari form -->
+    <!-- method adalah untuk menentukan method dari form -->
+    <!-- misal: form action="nama_file.php" method="post" -->
+    <form action="" method="post">
+
+    </form>
+
+    <!-- kita juga bisa mengatur multimedia -->
+    <!-- misal: -->
+    <audio controls>
+        <source src="nama_file.mp3" type="audio/mpeg">
+    </audio>
+    <video controls>
+        <source src="nama_file.mp4" type="video/mp4">
+    </video>
+    <!-- controls adalah untuk menampilkan controls dari audio atau video -->
+    <!-- source adalah untuk menentukan source dari audio atau video -->
+    <!-- type adalah untuk menentukan type dari audio atau video -->
+    <!-- tanpa controls juga bisa, tapi tidak akan muncul controls -->
+    <!-- misal: -->
+    <audio>
+        <source src="nama_file.mp3" type="audio/mpeg">
+    </audio>
+    <video>
+        <source src="nama_file.mp4" type="video/mp4">
+    </video>
+
+    <!-- iframe adalah untuk membuat iframe atau menampilkan halaman web lain di dalam halaman web kita -->
+    <!-- misal: -->
+    <iframe src="https://www.google.com/" width="500" height="500"></iframe>
+    <!-- src adalah untuk menentukan source dari iframe -->
+    <!-- width dan height adalah untuk menentukan width dan height dari iframe -->
+
+    <!-- kita juga bisa anchor atau link -->
+    <!-- misal: -->
+    <a href="https://www.google.com/">google</a>
+    <!-- ini akan membukanya di page saat ini -->
+    <a href="https://www.google.com/" target="_blank">google</a>
+    <!-- ini akan membukanya di tab baru -->
+    <a href="https://www.google.com/" target="_parent">google</a>
+    <!-- ini akan membukanya di frame parent -->
+    <a href="https://www.google.com/" target="_self">google</a>
+    <!-- ini akan membukanya di frame saat ini -->
+    <a href="https://www.google.com/" target="_top">google</a>
+    <!-- ini akan membukanya di frame top -->
+
+    <!-- div dan span, sekilas mirip, tapi ketika kita
+     membuat css atau melakukan inspect element,
+     kita akan tahu bahwa: keduanya memiliki style css bawaan:
+     
+     div: block
+     span: inline
+     -->
+    <!-- contoh tidak kasat mata: -->
+    <div>ini adalah paragraf</div>
+    <span>ini adalah paragraf</span>
+    <!-- agar kita tahu perbedaannya, kita coba tambahkan css background color -->
+    <!-- sebelumnya, ada tiga cara untuk menambahkan css: -->
+    <!-- 1. inline css -->
+    <div style="background-color: red;">ini adalah paragraf</div>
+    <span style="background-color: green;">ini adalah paragraf</span>
+    <!-- 2. internal css: lihat di bagian head -->
+    <!-- 3. external css: saya tidak akan menambahkan external css di sini -->
+    <!-- contohnya: misal kita punya file css bernama style.css -->
+    <!-- cukup tambahkan <link rel="stylesheet" href="style.css"> di bagian head -->
+    <!-- dari contoh di atas, kita akan tahu bahwa: -->
+    <!-- div akan muncul dengan background color red dari ujung kiri sampai ujung kanan tidak peduli
+      panjang objek atau teks di dalamnya-->
+    <!-- sementara span hanya akan muncul dengan background color green sesuai panjang objek atau teks di dalamnya-->
+
+    <!-- contoh di atas adalah html non semantic -->
+
+    <!-- kalau semantic: ada tag lain yang lebih spesifik untuk menentukan elemen -->
+    <!-- misal: alih-alih hanya menggunakan div div dan div lagi, kita bisa menggunakan tag lain -->
+    <!-- misal: bagian navigation: -->
+    <nav></nav>
+    <!-- atau bagian header: -->
+    <header></header>
+    <!-- atau bagian footer: -->
+    <footer></footer>
+    <!-- atau bagian section: -->
+    <section></section>
+    <!-- atau bagian main: -->
+    <main></main>
+    <!-- atau bagian article: -->
+    <article></article>
+    <!-- atau bagian aside: -->
+    <aside></aside>
+    <!-- atau bagian figure dengan figcaption: -->
+    <!-- CATATAN: <figcaption> HARUS berada di dalam <figure>, tidak bisa berdiri sendiri -->
+    <figure>
+        <img src="gambar.jpg" alt="deskripsi gambar">
+        <figcaption>Ini caption untuk gambar di atas</figcaption>
+    </figure>
+
+    <!-- CATATAN: <form> BUKAN termasuk semantic tag untuk struktur halaman.
+         <form> adalah tag untuk membuat formulir input data.
+         Semantic tags untuk STRUKTUR HALAMAN adalah:
+         header, nav, main, section, article, aside, footer, figure, figcaption -->
+
+    <!-- saya juga lupa bahwa ada fitur quotes -->
+    <q>ini adalah quotes</q>
+    <!-- atau blockquote -->
+    <blockquote>ini adalah blockquote</blockquote>
+    <!-- apa bedanya? -->
+    <!-- blockquote akan muncul dengan margin tanpa tanda kutip -->
+    <!-- quotes tidak akan muncul dengan margin dan akan muncul dengan tanda kutip -->
+
+
+
+    <!-- tambahan: kita bisa menggunakan tag script untuk mengaitkannya dengan JavaScript -->
+    <!-- entah untuk melakukan DOM manipulation atau hal lain -->
+
+    <!-- cara menambahkan JavaScript: -->
+    <!-- 1. Internal script (langsung di dalam HTML): -->
+    <script>
+        console.log("Hello World dari internal script");
+    </script>
+
+    <!-- 2. External script (file terpisah): -->
+    <script src="script.js"></script>
+
+    <!-- CATATAN tentang PHP: -->
+    <!-- PHP BUKAN tag HTML, melainkan bahasa pemrograman server-side -->
+    <!-- Untuk menggunakan PHP: -->
+    <!-- 1. File HARUS berekstensi .php (contoh: index.php), BUKAN .html -->
+    <!-- 2. Dibutuhkan web server dengan PHP (XAMPP, Laragon, MAMP, dll) -->
+    <!-- 3. Contoh kode PHP: <?php echo "Hello World"; ?> -->
+    <!-- PHP diproses di SERVER sebelum HTML dikirim ke browser -->
+
+    <!-- lebih lanjut, nanti kita pelajari di bagian JS dan PHP -->
+
+
+
+
+
+
+
+
+</body>
+
+</html>

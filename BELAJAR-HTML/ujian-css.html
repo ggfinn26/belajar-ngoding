@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian CSS - Latihan Lengkap</title>
+    <style>
+        /* ============================================
+           PANDUAN UJIAN CSS
+           ============================================
+           
+           Cara mengerjakan:
+           1. Baca instruksi pada setiap soal
+           2. Tulis CSS kamu di bagian yang ditandai
+           3. Simpan file dan refresh browser untuk melihat hasil
+           4. Bandingkan dengan target yang diminta
+           
+           Topik yang diuji:
+           - Selector (element, class, id, attribute, pseudo)
+           - Box Model (margin, padding, border)
+           - Typography (font, text)
+           - Colors & Background
+           - Display & Position
+           - Flexbox
+           - Grid
+           - Transition & Animation
+           - Responsive Design (Media Query)
+           
+           Selamat mengerjakan!
+           ============================================ */
+
+        /* RESET DASAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .soal {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .soal h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .instruksi {
+            background: #e7f3ff;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 15px;
+        }
+
+        .area-latihan {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            margin-top: 15px;
+            min-height: 100px;
+        }
+
+        /* ============================================
+           MULAI JAWAB DI BAWAH INI
+           ============================================ */
+
+        /* ==========================================
+           SOAL 1: SELECTOR DASAR
+           ==========================================
+           Target: 
+           - Semua elemen dengan class "teks-merah" berwarna merah
+           - Elemen dengan id "judul-utama" berwarna biru dan ukuran 32px
+           - Semua paragraf di dalam .soal-1-area memiliki margin-bottom 10px
+        */
+
+        .teks-merah {
+            color: red;
+        }
+
+        #judul-utama {
+            color: blue;
+            font-size: 32px;
+        }
+
+        .soal-1-area p {
+            margin-bottom: 10px;
+        }
+
+
+
+
+        /* ==========================================
+           SOAL 2: BOX MODEL
+           ==========================================
+           Target:
+           - Class "kotak" memiliki: width 200px, height 150px, 
+             background lightblue, padding 20px, margin 10px, 
+             border 3px solid darkblue
+        */
+
+        /* JAWABAN SOAL 2: tulis CSS di sini */
+
+        .kotak {
+            width: 200px;
+            height: 150px;
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px;
+            border: 3px solid darkblue;
+
+        }
+
+
+
+        /* ==========================================
+           SOAL 3: TYPOGRAPHY
+           ==========================================
+           Target:
+           - Class "judul-artikel" memiliki: font-size 28px, font-weight bold,
+             text-transform uppercase, letter-spacing 2px, color #2c3e50
+           - Class "paragraf-artikel" memiliki: font-size 16px, line-height 1.8,
+             text-align justify, text-indent 30px
+        */
+
+        /* JAWABAN SOAL 3: tulis CSS di sini */
+
+        .judul-artikel {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2c3e50;
+        }
+
+        .paragraf-artikel {
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+            text-indent: 30px;
+        }
+
+
+
+        /* ==========================================
+           SOAL 4: COLORS & BACKGROUND
+           ==========================================
+           Target:
+           - Class "gradient-box" memiliki: width 100%, height 200px,
+             background gradient dari #667eea ke #764ba2 (arah ke kanan),
+             border-radius 10px
+           - Class "pattern-box" memiliki: background-color #f0f0f0,
+             background-image dengan pattern (bisa pakai repeating-linear-gradient)
+        */
+
+        /* JAWABAN SOAL 4: tulis CSS di sini */
+
+        .gradient-box {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            border-radius: 10px;
+        }
+
+        .pattern-box {
+            background: white;
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #ddd 10px, #ddd 20px);
+        }
+
+        /* ==========================================
+           SOAL 5: DISPLAY
+           ==========================================
+           Target:
+           - Class "inline-item" menjadi display inline
+           - Class "block-item" menjadi display block dengan width 100%
+           - Class "inline-block-item" menjadi inline-block dengan width 150px, 
+             height 50px, background #3498db, color white, text-align center,
+             line-height 50px, margin 5px
+           - Class "hidden-item" menjadi tidak terlihat (display none)
+        */
+
+        /* JAWABAN SOAL 5: tulis CSS di sini */
+
+        .inline-item {
+            display: inline;
+        }
+
+        .block-item {
+            display: block;
+            width: 100%;
+        }
+
+        .inline-block-item {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            margin: 5px
+        }
+
+        .hidden-item {
+            display: none;
+        }
+
+
+
+        /* ==========================================
+           SOAL 6: POSITION
+           ==========================================
+           Target:
+           - Class "relative-box" memiliki: position relative, width 300px, 
+             height 200px, background #ecf0f1, border 2px solid #bdc3c7
+           - Class "absolute-box" memiliki: position absolute, top 20px, 
+             right 20px, width 80px, height 80px, background #e74c3c
+           - Class "fixed-badge" memiliki: position fixed, bottom 20px, 
+             right 20px, padding 15px 25px, background #27ae60, color white,
+             border-radius 5px
+        */
+
+        /* JAWABAN SOAL 6: tulis CSS di sini */
+
+        .relative-box {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background: #ecf0f1;
+            border: 2px solid #bdc3c7;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background: red;
+        }
+
+        .fixed-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: #27ae60;
+            color: white;
+            border-radius: 5px;
+        }
+
+
+
+        /* ==========================================
+           SOAL 7: FLEXBOX
+           ==========================================
+           Target:
+           - Class "flex-container" memiliki: display flex, 
+             justify-content space-between, align-items center,
+             flex-wrap wrap, gap 10px, padding 20px, background #f8f9fa
+           - Class "flex-item" memiliki: width 100px, height 100px, 
+             background #9b59b6, color white, display flex,
+             justify-content center, align-items center, font-weight bold
+        */
+
+        /* JAWABAN SOAL 7: tulis CSS di sini */
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            background: #9b59b6;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+
+
+        /* ==========================================
+           SOAL 8: GRID
+           ==========================================
+           Target:
+           - Class "grid-container" memiliki: display grid, 
+             grid-template-columns repeat(3, 1fr), gap 15px, padding 20px
+           - Class "grid-item" memiliki: background #1abc9c, color white,
+             padding 30px, text-align center, font-size 18px
+           - Class "grid-wide" memiliki: grid-column span 2
+           - Class "grid-tall" memiliki: grid-row span 2
+        */
+
+        /* JAWABAN SOAL 8: tulis CSS di sini */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background: #1abc9c;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .grid-wide {
+            grid-column: span 2;
+        }
+
+        .grid-tall {
+            grid-row: span 2;
+        }
+
+
+        /* ==========================================
+           SOAL 9: PSEUDO-CLASS & PSEUDO-ELEMENT
+           ==========================================
+           Target:
+           - Class "hover-button": saat hover, background berubah dari 
+             #3498db ke #2980b9, cursor pointer
+           - Class "link-custom": warna default #333, saat visited #666,
+             saat hover #e74c3c dengan text-decoration underline
+           - Class "first-letter-style": huruf pertama (::first-letter) 
+             memiliki font-size 2em, font-weight bold, color #e74c3c
+           - Class "before-icon"::before memiliki content "→ " dan color #27ae60
+        */
+
+        /* JAWABAN SOAL 9: tulis CSS di sini */
+
+        .hover-button:hover {
+            background-color: #2980b9;
+            cursor: pointer;
+        }
+
+        .link-custom {
+            color: #333;
+        }
+
+        .link-custom:visited {
+            color: #666;
+        }
+
+        .link-custom:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        .first-letter-style::first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .before-icon::before {
+            content: "→ ";
+            color: #27ae60;
+        }
+
+
+
+        /* ==========================================
+           SOAL 10: TRANSITION
+           ==========================================
+           Target:
+           - Class "transition-box" memiliki: width 100px, height 100px,
+             background #3498db, transition all 0.3s ease
+           - Saat hover: width 200px, background #e74c3c, border-radius 50%
+        */
+
+        /* JAWABAN SOAL 10: tulis CSS di sini */
+
+        .transition-box {
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .transition-box:hover {
+            width: 200px;
+            background: #e74c3c;
+            border-radius: 50%;
+        }
+
+
+
+        /* ==========================================
+           SOAL 11: TRANSFORM
+           ==========================================
+           Target:
+           - Class "rotate-hover": saat hover, rotate 45deg
+           - Class "scale-hover": saat hover, scale 1.2
+           - Class "skew-hover": saat hover, skewX 10deg
+           - Class "translate-hover": saat hover, translateY -10px
+           - Semua dengan transition 0.3s ease
+        */
+
+        /* JAWABAN SOAL 11: tulis CSS di sini */
+
+        .rotate-hover:hover {
+            rotate: 45deg;
+            transition: all 0.3s ease;
+        }
+
+        .scale-hover:hover {
+            scale: 1.2;
+            transition: all 0.3s ease;
+
+        }
+
+        .skew-hover:hover {
+            transform: skewx(10deg);
+            transition: all 0.3s ease;
+
+        }
+
+        .translate-hover:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+
+        }
+
+
+        /* ==========================================
+           SOAL 12: ANIMATION
+           ==========================================
+           Target:
+           - Buat @keyframes "pulse" yang mengubah transform scale 
+             dari 1 ke 1.1 dan kembali ke 1
+           - Buat @keyframes "slide-in" yang mengubah transform translateX 
+             dari -100% ke 0
+           - Class "pulse-animation" menggunakan animation pulse 1s infinite
+           - Class "slide-animation" menggunakan animation slide-in 0.5s ease-out
+        */
+
+        /* JAWABAN SOAL 12: tulis CSS di sini */
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .pulse-animation {
+            animation: pulse 1s infinite;
+        }
+
+        .slide-animation {
+            animation: slide-in 0.5s ease-out;
+        }
+
+
+
+        /* ==========================================
+           SOAL 13: BOX SHADOW & TEXT SHADOW
+           ==========================================
+           Target:
+           - Class "card-shadow" memiliki: background white, padding 20px,
+             box-shadow 0 4px 6px rgba(0,0,0,0.1), border-radius 8px
+           - Saat hover: box-shadow 0 10px 20px rgba(0,0,0,0.2)
+           - Class "text-shadow-style" memiliki: font-size 36px, font-weight bold,
+             text-shadow 2px 2px 4px rgba(0,0,0,0.3)
+        */
+
+        /* JAWABAN SOAL 13: tulis CSS di sini */
+
+        .card-shadow {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .card-shadow:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .text-shadow-style {
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ==========================================
+           SOAL 14: OVERFLOW & VISIBILITY
+           ==========================================
+           Target:
+           - Class "overflow-scroll" memiliki: width 200px, height 100px,
+             overflow-y scroll, border 1px solid #ccc, padding 10px
+           - Class "overflow-hidden" memiliki: width 200px, height 100px,
+             overflow hidden, border 1px solid #ccc, padding 10px
+           - Class "visibility-hidden" memiliki: visibility hidden
+           - Class "opacity-half" memiliki: opacity 0.5
+        */
+
+        /* JAWABAN SOAL 14: tulis CSS di sini */
+
+        .overflow-scroll {
+            width: 200px;
+            height: 100px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .overflow-hidden {
+            width: 200px;
+            height: 100px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .visibility-hidden {
+            visibility: hidden;
+        }
+
+        .opacity-half {
+            opacity: 0.5;
+        }
+
+
+
+        /* ==========================================
+           SOAL 15: Z-INDEX
+           ==========================================
+           Target:
+           - Class "layer-1" memiliki: position absolute, top 0, left 0,
+             width 150px, height 150px, background #e74c3c, z-index 1
+           - Class "layer-2" memiliki: position absolute, top 30px, left 30px,
+             width 150px, height 150px, background #3498db, z-index 2
+           - Class "layer-3" memiliki: position absolute, top 60px, left 60px,
+             width 150px, height 150px, background #27ae60, z-index 3
+        */
+
+        /* JAWABAN SOAL 15: tulis CSS di sini */
+
+        .layer-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            background: #e74c3c;
+            z-index: 1;
+        }
+
+        .layer-2 {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 150px;
+            height: 150px;
+            background: #3498db;
+            z-index: 2;
+        }
+
+        .layer-3 {
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            width: 150px;
+            height: 150px;
+            background: #27ae60;
+            z-index: 3;
+        }
+
+
+
+        /* ==========================================
+           SOAL 16: ATTRIBUTE SELECTOR
+           ==========================================
+           Target:
+           - Input dengan type="text" memiliki: border 2px solid #3498db, 
+             padding 10px, border-radius 5px
+           - Input dengan type="email" memiliki: border 2px solid #9b59b6,
+             padding 10px, border-radius 5px
+           - Link dengan href yang dimulai dengan "https" memiliki: 
+             color #27ae60
+           - Link dengan href yang berakhir dengan ".pdf" memiliki: 
+             color #e74c3c, font-weight bold
+        */
+
+        /* JAWABAN SOAL 16: tulis CSS di sini */
+
+        input[type=text] {
+            border: 2px solid #3498db;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input[type=email] {
+            border: 2px solid #9b59b6;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        a[href^=https] {
+            color: #27ae60;
+        }
+
+        a[href$=".pdf"] {
+            color: #e74c3c;
+        }
+
+        /* ==========================================
+           SOAL 17: NTH-CHILD SELECTOR
+           ==========================================
+           Target:
+           - Dalam .list-nth, li:first-child memiliki background #e74c3c
+           - Dalam .list-nth, li:last-child memiliki background #27ae60
+           - Dalam .list-nth, li:nth-child(odd) memiliki background #f8f9fa
+           - Dalam .list-nth, li:nth-child(even) memiliki background #e9ecef
+           - Dalam .list-nth, li:nth-child(3) memiliki background #3498db, 
+             color white
+        */
+
+        /* JAWABAN SOAL 17: tulis CSS di sini */
+
+        .list-nth li:nth-child(odd) {
+            background: #f8f9fa;
+        }
+
+        .list-nth li:nth-child(even) {
+            background: #e9ecef;
+        }
+
+        .list-nth li:nth-child(3) {
+            background: #3498db;
+        }
+
+        .list-nth li:first-child {
+            background: #e74c3c;
+        }
+
+        .list-nth li:last-child {
+            background: #27ae60;
+        }
+
+
+
+
+        /* ==========================================
+           SOAL 18: BORDER STYLES
+           ==========================================
+           Target:
+           - Class "border-solid" memiliki: border 3px solid #333
+           - Class "border-dashed" memiliki: border 3px dashed #e74c3c
+           - Class "border-dotted" memiliki: border 3px dotted #27ae60
+           - Class "border-double" memiliki: border 5px double #3498db
+           - Class "border-mixed" memiliki: border-top 3px solid red,
+             border-right 3px dashed green, border-bottom 3px dotted blue,
+             border-left 3px double orange
+           - Semua dengan padding 15px, margin 5px, display inline-block
+        */
+
+        /* JAWABAN SOAL 18: tulis CSS di sini */
+
+        .border-solid {
+            border: 3px solid #333;
+            padding: 15px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .border-dashed {
+            border: 3px dashed #e74c3c;
+            padding: 15px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .border-dotted {
+            border: 3px dotted #27ae60;
+            padding: 15px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .border-double {
+            border: 5px double #3498db;
+            padding: 15px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .border-mixed {
+            border-top: 3px solid red;
+            border-right: 3px dashed green;
+            border-bottom: 3px dotted blue;
+            border-left: 3px double orange;
+            padding: 15px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+
+
+        /* ==========================================
+           SOAL 19: MEDIA QUERY (RESPONSIVE)
+           ==========================================
+           Target:
+           - Class "responsive-box" memiliki: width 100%, padding 20px,
+             background #3498db, color white, text-align center
+           - Pada layar <= 768px: background berubah #e74c3c, font-size 14px
+           - Pada layar <= 480px: background berubah #27ae60, font-size 12px,
+             padding 10px
+        */
+
+        /* JAWABAN SOAL 19: tulis CSS di sini */
+
+        .responsive-box {
+            width: 100%;
+            padding: 20px;
+            background: #3498db;
+            color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .responsive-box {
+                background: #e74c3c;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .responsive-box {
+                background: #27ae60;
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+
+
+
+        /* ==========================================
+           SOAL 20: FLEXBOX LAYOUT LENGKAP
+           ==========================================
+           Target: Buat layout website sederhana dengan flexbox
+           - Class "navbar" memiliki: display flex, justify-content space-between,
+             align-items center, background #2c3e50, color white, padding 15px 20px
+           - Class "nav-links" memiliki: display flex, gap 20px, list-style none
+           - Class "main-content" memiliki: display flex, min-height 400px
+           - Class "sidebar" memiliki: width 250px, background #34495e, 
+             color white, padding 20px
+           - Class "content" memiliki: flex 1, padding 20px, background #ecf0f1
+        */
+
+        /* JAWABAN SOAL 20: tulis CSS di sini */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .main-content {
+            display: flex;
+            min-height: 400px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #34495e;
+            color: white;
+            padding: 20px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background: #ecf0f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">
+        📝 Ujian CSS - Latihan Lengkap
+    </h1>
+    <p style="text-align: center; margin-bottom: 40px; color: #666;">
+        Tulis CSS di bagian &lt;style&gt; untuk menyelesaikan setiap soal. Refresh browser untuk melihat hasil.
+    </p>
+
+    <!-- SOAL 1: SELECTOR DASAR -->
+    <div class="soal">
+        <h2>Soal 1: Selector Dasar</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Semua elemen class "teks-merah" → warna merah<br>
+            • Elemen id "judul-utama" → warna biru, ukuran 32px<br>
+            • Semua &lt;p&gt; di dalam .soal-1-area → margin-bottom 10px
+        </div>
+        <div class="area-latihan soal-1-area">
+            <h3 id="judul-utama">Ini Judul Utama</h3>
+            <p class="teks-merah">Paragraf dengan class teks-merah</p>
+            <p>Paragraf biasa</p>
+            <p class="teks-merah">Paragraf lain dengan class teks-merah</p>
+            <span class="teks-merah">Span dengan class teks-merah</span>
+        </div>
+    </div>
+
+    <!-- SOAL 2: BOX MODEL -->
+    <div class="soal">
+        <h2>Soal 2: Box Model</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "kotak" → width 200px, height 150px, background lightblue,
+            padding 20px, margin 10px, border 3px solid darkblue
+        </div>
+        <div class="area-latihan">
+            <div class="kotak">Ini adalah kotak</div>
+            <div class="kotak">Kotak kedua</div>
+        </div>
+    </div>
+
+    <!-- SOAL 3: TYPOGRAPHY -->
+    <div class="soal">
+        <h2>Soal 3: Typography</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "judul-artikel" → font-size 28px, font-weight bold, text-transform uppercase, letter-spacing 2px,
+            color #2c3e50<br>
+            • Class "paragraf-artikel" → font-size 16px, line-height 1.8, text-align justify, text-indent 30px
+        </div>
+        <div class="area-latihan">
+            <h3 class="judul-artikel">Ini Judul Artikel</h3>
+            <p class="paragraf-artikel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris.</p>
+            <p class="paragraf-artikel">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        </div>
+    </div>
+
+    <!-- SOAL 4: COLORS & BACKGROUND -->
+    <div class="soal">
+        <h2>Soal 4: Colors & Background</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "gradient-box" → width 100%, height 200px, background gradient dari #667eea ke #764ba2 (arah ke
+            kanan), border-radius 10px<br>
+            • Class "pattern-box" → background dengan pattern menggunakan repeating-linear-gradient
+        </div>
+        <div class="area-latihan">
+            <div class="gradient-box"></div>
+            <br>
+            <div class="pattern-box" style="height: 100px;"></div>
+        </div>
+    </div>
+
+    <!-- SOAL 5: DISPLAY -->
+    <div class="soal">
+        <h2>Soal 5: Display</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "inline-item" → display inline<br>
+            • Class "block-item" → display block, width 100%<br>
+            • Class "inline-block-item" → inline-block, width 150px, height 50px, background #3498db, color white,
+            text-align center, line-height 50px, margin 5px<br>
+            • Class "hidden-item" → display none
+        </div>
+        <div class="area-latihan">
+            <span class="inline-item">Inline 1</span>
+            <span class="inline-item">Inline 2</span>
+            <span class="inline-item">Inline 3</span>
+            <br><br>
+            <div class="block-item" style="background: #eee;">Block Item</div>
+            <br>
+            <span class="inline-block-item">IB 1</span>
+            <span class="inline-block-item">IB 2</span>
+            <span class="inline-block-item">IB 3</span>
+            <br><br>
+            <div class="hidden-item">Ini harus tersembunyi</div>
+            <p>Jika teks "Ini harus tersembunyi" tidak terlihat, berarti benar!</p>
+        </div>
+    </div>
+
+    <!-- SOAL 6: POSITION -->
+    <div class="soal">
+        <h2>Soal 6: Position</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "relative-box" → position relative, width 300px, height 200px, background #ecf0f1, border 2px solid
+            #bdc3c7<br>
+            • Class "absolute-box" → position absolute, top 20px, right 20px, width 80px, height 80px, background
+            #e74c3c<br>
+            • Class "fixed-badge" → position fixed, bottom 20px, right 20px, padding 15px 25px, background #27ae60,
+            color white, border-radius 5px
+        </div>
+        <div class="area-latihan">
+            <div class="relative-box">
+                <p>Ini relative box (parent)</p>
+                <div class="absolute-box"></div>
+            </div>
+            <div class="fixed-badge">Fixed Badge</div>
+        </div>
+    </div>
+
+    <!-- SOAL 7: FLEXBOX -->
+    <div class="soal">
+        <h2>Soal 7: Flexbox</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "flex-container" → display flex, justify-content space-between, align-items center, flex-wrap wrap,
+            gap 10px, padding 20px, background #f8f9fa<br>
+            • Class "flex-item" → width 100px, height 100px, background #9b59b6, color white, display flex,
+            justify-content center, align-items center, font-weight bold
+        </div>
+        <div class="area-latihan">
+            <div class="flex-container">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+                <div class="flex-item">5</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 8: GRID -->
+    <div class="soal">
+        <h2>Soal 8: Grid</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "grid-container" → display grid, grid-template-columns repeat(3, 1fr), gap 15px, padding 20px<br>
+            • Class "grid-item" → background #1abc9c, color white, padding 30px, text-align center, font-size 18px<br>
+            • Class "grid-wide" → grid-column span 2<br>
+            • Class "grid-tall" → grid-row span 2
+        </div>
+        <div class="area-latihan">
+            <div class="grid-container">
+                <div class="grid-item grid-wide">Wide (2 kolom)</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item grid-tall">Tall (2 baris)</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 9: PSEUDO-CLASS & PSEUDO-ELEMENT -->
+    <div class="soal">
+        <h2>Soal 9: Pseudo-class & Pseudo-element</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "hover-button" → saat hover: background dari #3498db ke #2980b9, cursor pointer<br>
+            • Class "link-custom" → default #333, visited #666, hover #e74c3c dengan underline<br>
+            • Class "first-letter-style" → ::first-letter font-size 2em, bold, color #e74c3c<br>
+            • Class "before-icon" → ::before content "→ ", color #27ae60
+        </div>
+        <div class="area-latihan">
+            <button class="hover-button"
+                style="padding: 10px 20px; border: none; background: #3498db; color: white;">Hover Me!</button>
+            <br><br>
+            <a href="#" class="link-custom">Link Custom 1</a> |
+            <a href="#visited" class="link-custom">Link Custom 2</a>
+            <br><br>
+            <p class="first-letter-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Huruf pertama harus
+                besar dan merah.</p>
+            <br>
+            <p class="before-icon">Ini teks dengan icon panah di depannya</p>
+        </div>
+    </div>
+
+    <!-- SOAL 10: TRANSITION -->
+    <div class="soal">
+        <h2>Soal 10: Transition</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "transition-box" → width 100px, height 100px, background #3498db, transition all 0.3s ease<br>
+            • Saat hover → width 200px, background #e74c3c, border-radius 50%
+        </div>
+        <div class="area-latihan">
+            <div class="transition-box"></div>
+        </div>
+    </div>
+
+    <!-- SOAL 11: TRANSFORM -->
+    <div class="soal">
+        <h2>Soal 11: Transform</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "rotate-hover" → saat hover rotate 45deg<br>
+            • Class "scale-hover" → saat hover scale 1.2<br>
+            • Class "skew-hover" → saat hover skewX 10deg<br>
+            • Class "translate-hover" → saat hover translateY -10px<br>
+            • Semua dengan transition 0.3s ease
+        </div>
+        <div class="area-latihan" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="rotate-hover"
+                style="width: 80px; height: 80px; background: #e74c3c; display: flex; justify-content: center; align-items: center; color: white;">
+                Rotate</div>
+            <div class="scale-hover"
+                style="width: 80px; height: 80px; background: #3498db; display: flex; justify-content: center; align-items: center; color: white;">
+                Scale</div>
+            <div class="skew-hover"
+                style="width: 80px; height: 80px; background: #27ae60; display: flex; justify-content: center; align-items: center; color: white;">
+                Skew</div>
+            <div class="translate-hover"
+                style="width: 80px; height: 80px; background: #9b59b6; display: flex; justify-content: center; align-items: center; color: white;">
+                Translate</div>
+        </div>
+    </div>
+
+    <!-- SOAL 12: ANIMATION -->
+    <div class="soal">
+        <h2>Soal 12: Animation</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • @keyframes "pulse" → transform scale dari 1 ke 1.1 dan kembali ke 1<br>
+            • @keyframes "slide-in" → transform translateX dari -100% ke 0<br>
+            • Class "pulse-animation" → animation pulse 1s infinite<br>
+            • Class "slide-animation" → animation slide-in 0.5s ease-out
+        </div>
+        <div class="area-latihan" style="display: flex; gap: 30px; align-items: center;">
+            <div class="pulse-animation"
+                style="width: 100px; height: 100px; background: #e74c3c; display: flex; justify-content: center; align-items: center; color: white;">
+                Pulse</div>
+            <div class="slide-animation"
+                style="width: 150px; height: 50px; background: #3498db; display: flex; justify-content: center; align-items: center; color: white;">
+                Slide In</div>
+        </div>
+    </div>
+
+    <!-- SOAL 13: BOX SHADOW & TEXT SHADOW -->
+    <div class="soal">
+        <h2>Soal 13: Box Shadow & Text Shadow</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "card-shadow" → background white, padding 20px, box-shadow 0 4px 6px rgba(0,0,0,0.1), border-radius
+            8px. Hover: box-shadow 0 10px 20px rgba(0,0,0,0.2)<br>
+            • Class "text-shadow-style" → font-size 36px, font-weight bold, text-shadow 2px 2px 4px rgba(0,0,0,0.3)
+        </div>
+        <div class="area-latihan">
+            <div class="card-shadow" style="display: inline-block; margin-right: 20px;">
+                <h4>Card dengan Shadow</h4>
+                <p>Hover untuk melihat efek shadow yang lebih besar</p>
+            </div>
+            <br><br>
+            <p class="text-shadow-style">Text dengan Shadow</p>
+        </div>
+    </div>
+
+    <!-- SOAL 14: OVERFLOW & VISIBILITY -->
+    <div class="soal">
+        <h2>Soal 14: Overflow & Visibility</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "overflow-scroll" → width 200px, height 100px, overflow-y scroll, border 1px solid #ccc, padding
+            10px<br>
+            • Class "overflow-hidden" → width 200px, height 100px, overflow hidden, border 1px solid #ccc, padding
+            10px<br>
+            • Class "visibility-hidden" → visibility hidden<br>
+            • Class "opacity-half" → opacity 0.5
+        </div>
+        <div class="area-latihan" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="overflow-scroll">
+                <p>Ini adalah teks yang sangat panjang untuk menguji overflow scroll. Lorem ipsum dolor sit amet
+                    consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+            </div>
+            <div class="overflow-hidden">
+                <p>Ini adalah teks yang sangat panjang untuk menguji overflow hidden. Lorem ipsum dolor sit amet
+                    consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+            </div>
+            <div class="visibility-hidden" style="background: #e74c3c; padding: 20px;">Ini harus invisible tapi masih
+                take space</div>
+            <div class="opacity-half" style="background: #3498db; padding: 20px; color: white;">Opacity 50%</div>
+        </div>
+    </div>
+
+    <!-- SOAL 15: Z-INDEX -->
+    <div class="soal">
+        <h2>Soal 15: Z-Index</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "layer-1" → position absolute, top 0, left 0, width 150px, height 150px, background #e74c3c, z-index
+            1<br>
+            • Class "layer-2" → position absolute, top 30px, left 30px, width 150px, height 150px, background #3498db,
+            z-index 2<br>
+            • Class "layer-3" → position absolute, top 60px, left 60px, width 150px, height 150px, background #27ae60,
+            z-index 3
+        </div>
+        <div class="area-latihan" style="position: relative; height: 250px;">
+            <div class="layer-1"></div>
+            <div class="layer-2"></div>
+            <div class="layer-3"></div>
+        </div>
+    </div>
+
+    <!-- SOAL 16: ATTRIBUTE SELECTOR -->
+    <div class="soal">
+        <h2>Soal 16: Attribute Selector</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Input[type="text"] → border 2px solid #3498db, padding 10px, border-radius 5px<br>
+            • Input[type="email"] → border 2px solid #9b59b6, padding 10px, border-radius 5px<br>
+            • Link[href^="https"] → color #27ae60<br>
+            • Link[href$=".pdf"] → color #e74c3c, font-weight bold
+        </div>
+        <div class="area-latihan">
+            <input type="text" placeholder="Input Text"><br><br>
+            <input type="email" placeholder="Input Email"><br><br>
+            <a href="https://google.com">Link HTTPS</a> |
+            <a href="http://example.com">Link HTTP</a> |
+            <a href="dokumen.pdf">Download PDF</a> |
+            <a href="gambar.jpg">Gambar JPG</a>
+        </div>
+    </div>
+
+    <!-- SOAL 17: NTH-CHILD SELECTOR -->
+    <div class="soal">
+        <h2>Soal 17: Nth-child Selector</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • .list-nth li:first-child → background #e74c3c, color white<br>
+            • .list-nth li:last-child → background #27ae60, color white<br>
+            • .list-nth li:nth-child(odd) → background #f8f9fa<br>
+            • .list-nth li:nth-child(even) → background #e9ecef<br>
+            • .list-nth li:nth-child(3) → background #3498db, color white
+        </div>
+        <div class="area-latihan">
+            <ul class="list-nth" style="list-style: none; padding: 0;">
+                <li style="padding: 10px;">Item 1 (first-child - harus merah)</li>
+                <li style="padding: 10px;">Item 2 (even)</li>
+                <li style="padding: 10px;">Item 3 (nth-child 3 - harus biru)</li>
+                <li style="padding: 10px;">Item 4 (even)</li>
+                <li style="padding: 10px;">Item 5 (odd)</li>
+                <li style="padding: 10px;">Item 6 (last-child - harus hijau)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SOAL 18: BORDER STYLES -->
+    <div class="soal">
+        <h2>Soal 18: Border Styles</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "border-solid" → border 3px solid #333<br>
+            • Class "border-dashed" → border 3px dashed #e74c3c<br>
+            • Class "border-dotted" → border 3px dotted #27ae60<br>
+            • Class "border-double" → border 5px double #3498db<br>
+            • Class "border-mixed" → border berbeda setiap sisi (top: solid red, right: dashed green, bottom: dotted
+            blue, left: double orange)<br>
+            • Semua dengan padding 15px, margin 5px, display inline-block
+        </div>
+        <div class="area-latihan">
+            <div class="border-solid">Solid</div>
+            <div class="border-dashed">Dashed</div>
+            <div class="border-dotted">Dotted</div>
+            <div class="border-double">Double</div>
+            <div class="border-mixed">Mixed</div>
+        </div>
+    </div>
+
+    <!-- SOAL 19: MEDIA QUERY -->
+    <div class="soal">
+        <h2>Soal 19: Media Query (Responsive)</h2>
+        <div class="instruksi">
+            <strong>Target:</strong><br>
+            • Class "responsive-box" → width 100%, padding 20px, background #3498db, color white, text-align center<br>
+            • ≤768px → background #e74c3c, font-size 14px<br>
+            • ≤480px → background #27ae60, font-size 12px, padding 10px
+        </div>
+        <div class="area-latihan">
+            <div class="responsive-box">
+                Resize browser untuk melihat perubahan warna!<br>
+                Desktop: Biru | Tablet (≤768px): Merah | Mobile (≤480px): Hijau
+            </div>
+        </div>
+    </div>
+
+    <!-- SOAL 20: FLEXBOX LAYOUT -->
+    <div class="soal">
+        <h2>Soal 20: Flexbox Layout Lengkap</h2>
+        <div class="instruksi">
+            <strong>Target:</strong> Buat layout website dengan flexbox<br>
+            • Class "navbar" → display flex, justify-content space-between, align-items center, background #2c3e50,
+            color white, padding 15px 20px<br>
+            • Class "nav-links" → display flex, gap 20px, list-style none<br>
+            • Class "main-content" → display flex, min-height 400px<br>
+            • Class "sidebar" → width 250px, background #34495e, color white, padding 20px<br>
+            • Class "content" → flex 1, padding 20px, background #ecf0f1
+        </div>
+        <div class="area-latihan" style="border: none; padding: 0;">
+            <nav class="navbar">
+                <div class="logo">MyWebsite</div>
+                <ul class="nav-links">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+            <div class="main-content">
+                <aside class="sidebar">
+                    <h3>Sidebar</h3>
+                    <p>Menu 1</p>
+                    <p>Menu 2</p>
+                    <p>Menu 3</p>
+                </aside>
+                <main class="content">
+                    <h2>Main Content</h2>
+                    <p>Ini adalah area konten utama. Gunakan flexbox untuk membuat layout ini bekerja dengan benar.</p>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <div
+        style="text-align: center; padding: 40px; background: #2c3e50; color: white; margin-top: 30px; border-radius: 8px;">
+        <h2>🎉 Selesai!</h2>
+        <p>Jika semua soal sudah dikerjakan dengan benar, selamat! Kamu sudah menguasai CSS dasar.</p>
+        <p>Lanjut ke ujian Tailwind CSS untuk menguji kemampuan framework CSS!</p>
+    </div>
+
+</body>
+
+</html>
