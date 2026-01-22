@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const sayHello = (name) => {
+            const say = `Hello ${name}`;
+            document.writeln(say);
+        }
+
+        sayHello("Dewa");
+
+        const sayHalo = (name) => document.writeln(`Halo ${name}`)
+
+        sayHalo("Agus");
+
+        const hitung = (pertama, kedua) => {
+            return pertama + kedua;
+        }
+
+        document.writeln(hitung(1, 15))
+
+        const sum = (first, second) => first + second;
+        document.writeln(sum(10, 20))
+
+        const sayOke = nama => document.writeln(`Hi! ${nama}`);
+        sayOke("BIBI");
+
+        function giveMeName(callback) {
+            callback("Ahnaf");
+        }
+
+        giveMeName(babi => document.writeln(`Halo ${babi}`))
+    </script>
+</body>
+
+</html>
