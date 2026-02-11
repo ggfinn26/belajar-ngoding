@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const name = ["Ahnaf", "Nadewa", "Biyangsa"];
+        const [firstName, middleName, lastName] = name;
+
+        document.writeln(firstName);
+        document.writeln(middleName);
+        document.writeln(lastName);
+
+        const person = {
+            namaPertama: "Ahnaf",
+            namaTerakhir: "Nadewa",
+            address: {
+                street: "Taman Pesona Asri",
+                city: "Makassar",
+                country: "Indonesia"
+            },
+            hobi: "Main Game",
+            channel: "Si Keren dan Tampan"
+        };
+
+        let {namaPertama, namaTerakhir, address:{city, street, country}, ...others} = person;
+        document.writeln(namaPertama);
+        document.writeln(namaTerakhir);
+        document.writeln(`<p> ${city} </p>`)
+        document.writeln(`<p> ${street} </p>`)
+        document.writeln(`<p> ${country} </p>`)
+        console.info(others);
+    </script>
+</body>
+</html>
