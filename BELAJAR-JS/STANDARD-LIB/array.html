@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {
+            const array = ["Muhammad", "Ahnaf", "Nadewa", "Biyangsa", "Ahyar"]
+            array.forEach(function (value, index) {
+                console.info(`${index}: ${value}`)
+            })
+
+            array.forEach((value, index) => console.info(`${index}: ${value}`))
+            array.forEach(value => console.info(value))
+
+        }
+        {
+            const queue = []
+            queue.push("x Muhammad")
+            queue.push("x Ahnaf")
+            queue.push("x Nadewa")
+            queue.push("x Biyangsa")
+            queue.push("x Ahyar")
+
+            console.info(queue)
+            console.info(queue.shift())
+            console.info(queue.shift())
+            console.info(queue.shift())
+            console.info(queue.shift())
+            console.info(queue.shift())
+            console.info(queue)
+            console.info(queue.shift())
+        }
+        {
+            const stack = []
+            stack.push("x Muhammad")
+            stack.push("x Ahnaf")
+            stack.push("x Nadewa")
+            stack.push("x Biyangsa")
+            stack.push("x Ahyar")
+
+            console.info(stack)
+            console.info(stack.pop())
+            console.info(stack.pop())
+            console.info(stack.pop())
+            console.info(stack.pop())
+            console.info(stack.pop())
+            console.info(stack)
+            console.info(stack.shift())
+        }
+
+        {
+            const source = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+            console.info(source.find(value => value > 3))
+            console.info(source.findIndex(value => value > 3))
+            console.info(source.includes(7))
+            console.info(source.indexOf(5))
+            console.info(source.lastIndexOf(5))
+        }
+
+        {
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            console.info(numbers.filter(value => value % 2 === 1))
+            console.info(numbers.filter(value => value % 2 === 0))
+        }
+
+        {
+            const names = "Muhammad Ahnaf Nadewa Biyangsa Ahyar".split(" ");
+            console.info(names.map(value => value.toUpperCase()));
+
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            console.info(numbers.reduce((result, value) => result + value))
+            console.info(numbers.reduceRight((result, value) => result + value))
+        }
+
+        {
+            const names = ["Muhammad", "Ahnaf", "Nadewa", "Biyangsa", "Ahyar"];
+            const namesUpper = names.map(value => value.toUpperCase());
+            console.info(namesUpper);
+
+            const namesReduce = names.reduce((before, value) => before + " " + value);
+            console.info(namesReduce)
+
+            const namesRight = names.reduceRight((before, value) => before + " " + value);
+            console.info(namesRight)
+        }
+
+        {
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            const total = numbers.reduce((before, value) => before + value);
+            console.info(total)
+        }
+    </script>
+</body>
+
+</html>

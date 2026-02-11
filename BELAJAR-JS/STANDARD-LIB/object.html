@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            firstName: "Muhammad Ahnaf Nadewa",
+            lastName: "Biyangsa Ahyar"
+        };
+
+        // Object.freeze(person);
+        Object.seal(person)
+        person.firstName = "diubah";
+        // person.middleName = "Hi" ; tidak bisa ditambah lagi
+        delete person.firstName;
+        console.info(person)
+    </script>
+</body>
+
+</html>
