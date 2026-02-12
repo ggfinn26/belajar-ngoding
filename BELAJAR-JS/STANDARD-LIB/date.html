@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const date = new Date();
+        const waktu = new Date(2019, 7, 19)
+        const waktudua = new Date(2019, 7, 19, 1, 1, 23, 49)
+        // const timestampe = new Date(timestamp)
+        const timestamp = Date.now();
+        const dateUnix = new Date(timestamp)
+        const parseTimeStamp = Date.parse("2020-12-29T10:10:10.123+07:00")
+        const parseTimeDate = new Date(parseTimeStamp)
+
+        console.info(date)
+        console.info(waktu)
+        console.info(waktudua)
+        // console.info(timestampe)
+        console.info(timestamp)
+        console.info(dateUnix)
+        console.info(dateUnix.getTime())
+        console.info(parseTimeStamp)
+        console.info(parseTimeDate)
+
+        {
+            const date = new Date()
+            date.setFullYear(2026);
+
+            console.info(date.getFullYear())
+            console.info(date.getMonth())
+            console.info(date.getDate())
+            console.info(date.getHours())
+            console.info(date.getMinutes())
+            console.info(date.getSeconds())
+            console.info(date.getMilliseconds())
+            console.info(date.getTimezoneOffset())
+        }
+    </script>
+</body>
+
+</html>

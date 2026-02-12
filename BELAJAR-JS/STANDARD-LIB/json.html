@@ -8,7 +8,26 @@
 </head>
 
 <body>
+    <script>
+        {
+            const person = {
+                firstName: "Ahnaf",
+                lastName: "Nadewa",
+                address: {
+                    country: "Indonesia",
+                    province: "South Sulawesi"
+                },
+                hobbies: [
+                    "coding", "game", "travelling"
+                ]
+            };
+            const json = JSON.stringify(person);
+            const personAgain = JSON.parse(json)
 
+            console.info(json)
+            console.info(personAgain)
+        }
+    </script>
 </body>
 
 </html>
