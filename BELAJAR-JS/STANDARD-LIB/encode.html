@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    { const url = 'http://contoh.com/?name=Ahnaf Nadewa Biyangsa Ahyar';
+        console.info(url)
+
+        const encoded = encodeURI(url)
+        console.info(encoded)
+
+        const decoded = decodeURI(encoded)
+        console.info(decoded)
+        
+    }
+
+    {
+        const value = "Ahnaf&Nadewa=Biyangsa"
+        const url = 'http://www.contoh.com/?name='
+
+        const encoded = encodeURIComponent(value);
+        console.info(url+encoded);
+
+        const decoded = decodeURIComponent(encoded);
+        console.info(url+decoded)
+    }
+    </script>
+</body>
+</html>
