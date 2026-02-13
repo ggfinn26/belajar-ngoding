@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content" class="content">
+        <h1 id="title">Belajar JavaScript DOM</h1>
+        <p id="description">Selamat Belajar JavaScript DOM</p>
+    </div>
+
+    <script>
+        console.info(document.getElementById("title"))
+        document.getElementById("title").remove()
+        console.info(document.getElementById("title"))
+        console.info(document.getElementById("description"))
+        document.getElementById("description").remove()
+        console.info(document.getElementById("description"))
+
+        const content = document.getElementById("content");
+
+        const subtitle = document.createElement("h2");
+        subtitle.textContent = "INI ADALAH SUBTITLE";
+        content.appendChild(subtitle);
+
+        const descriptionsubtitle = document.createElement("p");
+        descriptionsubtitle.textContent = "yayayaya"
+        content.appendChild(descriptionsubtitle)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="content">
+        <script>
+            console.info("Hello World")
+        </script>
+        <b>Ahnaf</b> Nadewa <i> Biyangsa</i>
+    </p>
+
+    <div id="content2"></div>
+
+    <script>
+        const content = document.getElementById("content")
+        console.info(content.textContent);
+        console.info(content.innerText);
+        console.info(content.innerHTML);
+
+        const content2 = document.getElementById("content2");
+        content2.innerHTML = "<h1> This is Title </h1> <p> This is Description </p>"
+    </script>
+</body>
+
+</html>

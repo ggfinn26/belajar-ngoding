@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+
+    <div id="content" class="content">
+        <h1 id="title">This is Title</h1>
+        <p id="description">This is Description</p>
+    </div>
+    <script>
+
+        const content = document.getElementById("content");
+
+        console.info(content.id);
+        console.info(content.className);
+        console.info(content.tagName);
+
+        const title = document.getElementById("title").remove;
+
+        console.info(title.id);
+        console.info(title.className);
+        console.info(title.tagName);
+
+
+        const description = document.getElementById("description");
+        // const title = document.getElementById("title");
+        // title.textContent = "Belajar JavaScript DOM";
+
+        // const descprition = document.getElementById("description");
+        // description.textContent = "Selamat Belajar JavaScript DOM"
+    </script>
+</body>
+
+</html>
